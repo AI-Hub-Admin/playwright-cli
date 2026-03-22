@@ -291,6 +291,22 @@ npx playwright-cli open https://example.com
 npx playwright-cli click e1
 ```
 
+### CLI Hints
+Use agtm cli hints to help both humans and agents complete playwright commands, either interactively or directly.
+
+<details>
+<summary>Hints</summary>
+
+```shell
+# Interactive CLI mode for humans and agents: agtm run <id> <cli> 
+agtm run play # Uses hints to resolve to the Playwright CLI
+agtm run microsoft/playwright-cli open  ## "goto" is hinted as a Playwright command (navigate to a URL)
+# agent mode Non Interactive Hints
+agtm run microsoft/playwright-cli open --mode agent ## agent mode return hints for similar commands of keyword "open"
+```
+
+</details>
+
 ## Configuration file
 
 The Playwright CLI can be configured using a JSON configuration file. You can specify the configuration file using the `--config` command line option:
